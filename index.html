@@ -6,7 +6,7 @@
     <title>Weather_Application</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
+    
 </head>
 <body>
     <div class="card">
@@ -36,5 +36,35 @@
          </div>  
         </div>
     </div>
+
+<Script>
+
+const apiKey = "6cd81a8afb1dd7f8bca330432b8b4588";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const searchBox = document.querySelector(".search input")
+const searchBtn = document.querySelector(".search button")
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    var data = await response.json();
+
+    console.log(data);
+
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = math.round(data.main.temp) + "°c";
+    document.querySelector(".Humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
+
+}
+
+searchBtn.addEventListener("click", ()=>{
+    checkWeather(searchBox.value);
+})
+
+
+
+</Script>
+
 </body>
 </html>
