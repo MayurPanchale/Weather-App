@@ -1,2 +1,2 @@
 <h1>Weather-App</h1>
-Weather app using HTML, CSS and JavaScript.
+This is a simple weather application built using HTML, CSS, and JavaScript. It fetches real-time weather data from the OpenWeatherMap API based on the user's input city.
