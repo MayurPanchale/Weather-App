@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title>Weather App Documentation</title> -->
 </head>
-<body>git
+<body>
     <div>
      <div class="documentation">
         <h1>Weather-App</h1>
